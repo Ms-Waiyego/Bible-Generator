@@ -17,17 +17,16 @@
    <div class="likes-section">
     <span id="like-count" class="likes">0 likes</span>
     <button id="like-button" class="like-button">♥</button>
-  </div>
-   <form action="" method="POST">
-    <label for="comment">Comments</label>
-    <input type="text" name="comment" id="comment" placeholder="Type Comment">
-   <button class="comment-button" type="submit">Add Comment</button>
-   </form>
-  <div>
-  <ul id="comments" class="comment-list">
-    <li></li>
-  </ul>
-  </div>
+    </div>
+    <form id="comment_section" action="" method="POST">
+        <label for="add-comment">Comments</label>
+        <input type="text" id="add-comment" name="comment" placeholder="Type Comment">
+        <button type="submit">Add Comment</button>
+      </form>
+      <div id="comment">
+        <ul id="comment">
+        </ul>
+      </div>
     </div>
 </body>
 <script src="./index.js"></script>

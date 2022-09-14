@@ -19,23 +19,16 @@ function getverse(verse) {
   .then((response)=> response.json())
   .then((bibleverse)=>{ console.log(bibleverse)
    document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text) })}
+
 //Comment section
-let newComment = "";
-const addComment = (event) => {
-    event.preventDefault();
-    newComment = event.target.value;
-    if(newComment !=""){
-        return newComment;
-    }
-}
-
-comments.addEventListener('submit',addComment);
-
-// Add submit event listener to form for adding comments
-const handleSubmit = (event) => {
-    event.preventDefault();
-    let newCommentItem = document.createElement("li");
-    newCommentItem.innerText = newComment;
-    commentList.appendChild(newCommentItem);
-    comments.value = "";
+ const form = document.querySelector('form')
+ form.addEventListener('submit', onSubmit);
+ function onSubmit(e) {
+  e.preventDefault();
+  handleComment(e.target["add-comment"].value)}
+ function handleComment(comment) { 
+  let p = document.createElement('p')
+  p.textContent = comment
+  console.log(p)
+ document.querySelector("#comment").appendChild(p)
 }
