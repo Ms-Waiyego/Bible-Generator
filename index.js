@@ -1,11 +1,3 @@
-//Creating a submit button
-//This button enables one to submit their comment on the verse given
-
-document.addEventListener("DOMContentLoaded", () => {
-    
-      console.log ("After DOM loaded")
-    });
-    console.log('Before DOM loads')
 
 //Adding a like button 
 //Adding a function that add number of likes on the page 
@@ -27,3 +19,23 @@ function getverse(verse) {
   .then((response)=> response.json())
   .then((bibleverse)=>{ console.log(bibleverse)
    document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text) })}
+//Comment section
+let newComment = "";
+const addComment = (event) => {
+    event.preventDefault();
+    newComment = event.target.value;
+    if(newComment !=""){
+        return newComment;
+    }
+}
+
+comments.addEventListener('submit',addComment);
+
+// Add submit event listener to form for adding comments
+const handleSubmit = (event) => {
+    event.preventDefault();
+    let newCommentItem = document.createElement("li");
+    newCommentItem.innerText = newComment;
+    commentList.appendChild(newCommentItem);
+    comments.value = "";
+}
