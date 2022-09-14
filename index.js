@@ -34,3 +34,12 @@ function getverse(verse) {
   console.log(p)
  document.querySelector("#comment").appendChild(p)
 }
+// Create an function that runs immediately the page loads and calls the  functions
+
+const init = () => {
+    getverse();
+}
+
+// Add an event listener for page loading and call the init function : 
+
+document.addEventListener('DOMContentLoaded',init)
