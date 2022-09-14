@@ -20,6 +20,7 @@ function getverse(verse) {
   .then((bibleverse)=>{ console.log(bibleverse)
    document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text) })}
 
+
 //Comment section
 // Add submit event listener to form for adding comments
 // Create variable to store new comment and add event listener to input element to update the variable
@@ -34,12 +35,11 @@ function getverse(verse) {
   console.log(p)
  document.querySelector("#comment").appendChild(p)
 }
-// Create an function that runs immediately the page loads and calls the  functions
 
+// Create an function that runs immediately the page loads and calls the  functions
 const init = () => {
     getverse();
 }
-
 // Add an event listener for page loading and call the init function : 
 
 document.addEventListener('DOMContentLoaded',init)
