@@ -4,3 +4,19 @@ body{
     font-style: oblique;
    font-family: Arial, Helvetica, sans-serif;
 }
+#get-verse{
+    padding: 5px 20 px ;
+    border-bottom: 10px;
+    margin-bottom: 10px;
+    border: 10px;
+    border-color: black; 
+}
+#comment{
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;;
+    border-color: black;
+    height: 20px;
+}
