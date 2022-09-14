@@ -17,17 +17,13 @@ currentLikeCount = currentLikeCount + 1;
 return likeCountElement.innerHTML = `${currentLikeCount} likes`; 
 }))
 
-
+//Fetching the bible API 
+//Creating a button that generates the verse when clicked
+//Displaying the bible vesre
 document.getElementById('get-verse').addEventListener('click', getverse)
 function getverse(verse) {
   fetch(`https://bible-api.com/romans+12:1-2`,{
    method : "GET",})
   .then((response)=> response.json())
   .then((bibleverse)=>{ console.log(bibleverse)
-  const parentDiv = document.getElementById("verse")
-  Array.from(bibleverse).forEach((verse) =>{
-    bibleverse += `<p>${verse.text}</p>`
-   })
-   document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text)
-  } )
-  }
+   document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text) })}
