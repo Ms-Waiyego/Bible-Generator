@@ -21,6 +21,8 @@ function getverse(verse) {
    document.getElementById('verse').innerHTML= JSON.stringify(bibleverse.text) })}
 
 //Comment section
+// Add submit event listener to form for adding comments
+// Create variable to store new comment and add event listener to input element to update the variable
  const form = document.querySelector('form')
  form.addEventListener('submit', onSubmit);
  function onSubmit(e) {
