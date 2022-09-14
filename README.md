@@ -1,4 +1,4 @@
-# Bible-Generator
+# Bible-Verse-Generator
 A webpage that generates an bible verse fetched from an API
 This project uses javascript to create a bible verse geneartor
 I used the API from https://bible-api.com/romans+12:1-2 that gives a single bible verse.
