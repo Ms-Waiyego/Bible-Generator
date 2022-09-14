@@ -8,20 +8,27 @@
     <title>Bible Verse Generator</title>
 </head>
 <body>
+    <div id="main-content">
    <h1>A VERSE A DAY KEEPS THE DEVIL AWAY</h1> 
    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShxtwZGLRYyFNbgdV5mU9cejHSx2Iuwoc8wA&usqp=CAU" >
    <h3>Bible Verse</h3>
+   <div id="verse"></div>
    <button id="get-verse">Get Verse</button>
+   <div class="likes-section">
+    <span id="like-count" class="likes">0 likes</span>
+    <button id="like-button" class="like-button">♥</button>
+  </div>
    <form action="" method="POST">
     <label for="comment">Comments</label>
     <input type="text" name="comment" id="comment" placeholder="Type Comment">
-    <input type="button" value="Add comment">
+   <button class="comment-button" type="submit">Add Comment</button>
    </form>
   <div>
-    <h4>Comments</h4>
-  <ul id="comments">
+  <ul id="comments" class="comment-list">
+    <li></li>
   </ul>
   </div>
+    </div>
 </body>
 <script src="./index.js"></script>
 </html>
